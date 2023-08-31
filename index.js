@@ -2,6 +2,11 @@ let plusbuttons = document.querySelectorAll(".plus");
 let minusbuttons = document.querySelectorAll(".minus");
 let resetbuttons = document.querySelectorAll(".reset");
 
+// 阻止双击事件
+document.addEventListener('dblclick', function(e){
+    e.preventDefault();
+});
+
 $(document).ready(function() {
     console.log("loaded");
   });
