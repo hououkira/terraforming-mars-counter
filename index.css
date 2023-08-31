@@ -1,0 +1,43 @@
+.main {
+    height: 100vh;
+}
+
+.counter {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* 白色背景 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果 */
+    padding: 20px; /* 内部空白 */
+    margin: 15px; /* 外部空白 */
+    text-align: center; /* 文本居中 */
+    transition: box-shadow 0.3s ease; /* 平滑的阴影过渡 */
+}
+
+.counter h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+.counter button {
+    width: 50px;
+    font-size: 24px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.counter .left {
+    margin-right: 20px;
+}
+
+.number {
+    width: 50px;
+}
+
+.right {
+    margin-left: 20px;
+    display: flex;
+}
