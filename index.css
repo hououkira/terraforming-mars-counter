@@ -27,6 +27,7 @@
     padding: 10px;
     margin: 5px;
     cursor: pointer;
+    touch-action: manipulation;  /* 防止双击缩放 */
 }
 
 .counter .left {
