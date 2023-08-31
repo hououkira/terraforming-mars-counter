@@ -2,6 +2,8 @@ let plusbuttons = document.querySelectorAll(".plus");
 let minusbuttons = document.querySelectorAll(".minus");
 let resetbuttons = document.querySelectorAll(".reset");
 
+let targets = [0, 0, 0, 0, 0, 0]; // 用于按钮是用来提升六种的资源数量还是产能，如果是资源则为0，如果是产能则为1
+
 // 阻止双击事件
 document.addEventListener('dblclick', function(e){
     e.preventDefault();
@@ -13,20 +15,44 @@ $(document).ready(function() {
 
 
 function increment(button) {
-    var $h1 = $(button).parent().parent().prev().find('h1');
-    var currentCount = parseInt($h1.text(), 10);
-    $h1.text(currentCount + 1);
+    if(targets[0] == 0){
+        var $h1 = $(button).parent().parent().prev().find('.num');
+        var currentCount = parseInt($h1.text(), 10);
+        $h1.text(currentCount + 1);
+    }
+    else{
+        var $h1 = $(button).parent().parent().prev().find('.production');
+        var currentCount = parseInt($h1.text(), 10);
+        $h1.text(currentCount + 1);
+    }
 }
   
 
 function decrement(button) {
-    var $h1 = $(button).parent().parent().prev().find('h1');
-    var currentCount = parseInt($h1.text(), 10);
-    currentCount > 0 ? $h1.text(currentCount - 1) : $h1.text(0);
+    if(targets[0] == 0){
+        var $h1 = $(button).parent().parent().prev().find('.num');
+        var currentCount = parseInt($h1.text(), 10);
+        $h1.text(currentCount - 1);
+    }
+    else{
+        var $h1 = $(button).parent().parent().prev().find('.production');
+        var currentCount = parseInt($h1.text(), 10);
+        $h1.text(currentCount - 1);
+    }
 }
   
 
 function reset(button) {
-    var $h1 = $(button).parent().parent().prev().find('h1').text(0);
+    if(targets[0] == 0){
+        var $h1 = $(button).parent().parent().prev().find('.num');
+        $h1.text(0);
+    }
+    else{
+        var $h1 = $(button).parent().parent().prev().find('.production');
+        $h1.text(0);
+    }
 }
 
+function toggleTarget(){
+    
+}

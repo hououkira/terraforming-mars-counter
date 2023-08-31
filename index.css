@@ -1,13 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .main {
     height: 100vh;
+    margin: auto auto;
 }
 
 .counter {
-    width: 400px;
+    width: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff; /* 白色背景 */
+    background-color: rgb(245,232,221); /* 白色背景 */
     border-radius: 8px; /* 圆角 */
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果 */
     padding: 20px; /* 内部空白 */
@@ -16,10 +29,16 @@
     transition: box-shadow 0.3s ease; /* 平滑的阴影过渡 */
 }
 
-.counter h1 {
+.counter .num {
     font-size: 48px;
     margin: 0;
   }
+
+.counter .production {
+    font-size: 24px;
+    color: purple;
+    margin: 0;
+}
   
 .counter button {
     width: 50px;
@@ -40,4 +59,24 @@
 .right {
     margin-left: 20px;
     display: flex;
+}
+
+.production-button {
+    background-color: purple;  /* 蓝色背景 */
+    color: white;  /* 白色文字 */
+    padding: 14px 20px;  /* 内部填充 */
+    margin: 15px;
+    border: none;  /* 无边框 */
+    border-radius: 12px;  /* 圆角 */
+    cursor: pointer;  /* 鼠标悬停时变成手形 */
+    width: 1040px;  /* 宽度 */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  /* 阴影效果 */
+    transition: all 0.3s ease 0s;  /* 过渡效果 */
+    font-size: 60px;
+    
+}
+
+.production-button:hover {
+    background-color: #2980b9;  /* 鼠标悬停时背景色 */
+    box-shadow: 0px 12px 24px 0px rgba(0,0,0,0.2);  /* 鼠标悬停时阴影效果 */
 }
