@@ -66,7 +66,7 @@ function production() {
         if($(this).parent().parent().parent().attr('id') === 'TR') return;
         num = $(this).text();
         productionValue = $(this).next().text();
-        $(this).text(parseInt(num, 10) + parseInt(productionValue, 10));
+        $(this).text(parseInt(num, 10) + parseInt(productionValue, 10));    
         if($(this).parent().parent().parent().attr('id') === 'credit') {
             TR = $('#TR').find('.num').text();
             $(this).text(parseInt(num, 10) + parseInt(productionValue, 10) + parseInt(TR, 10));
