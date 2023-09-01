@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <title>Home</title>
-    <meta charset="utf-8">
+    <title>《重塑火星》辅助</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="jquery-3.7.1.min.js"></script>
     <script src="index.js"></script>
@@ -19,10 +19,16 @@
                 </div>
             </div>
             <div class="right">
-                <div class="control">
-                    <button onclick="increment(this)" class="plus">+</button>
-                    <button onclick="decrement(this)" class="minus">-</button>
-                    <button onclick="reset(this)" class="reset">C</button>
+                <div class="num-control">
+                    <button onclick="increment(this, 'num')" class="plus">+</button>
+                    <button onclick="decrement(this, 'num')" class="minus">-</button>
+                    <button onclick="reset(this, 'num')" class="reset">C</button>
+                    <input type="number" class="num-input" placeholder="42">
+                </div>
+                <div class="production-control">
+                    <button onclick="increment(this, 'production')" class="plus">+</button>
+                    <button onclick="decrement(this, 'production')" class="minus">-</button>
+                    <button onclick="reset(this, 'production')" class="reset">C</button>
                 </div>
             </div>
         </div>
@@ -31,13 +37,21 @@
                 <img src="img/steel.png" alt="steel">
             </div>
             <div class="number">
-                <h1>0</h1>
+                <div class="flex">
+                <h1 class="num">0</h1>
+                <h2 class="production">1</h2>
+                </div>
             </div>
             <div class="right">
-                <div class="control">
-                    <button onclick="increment(this)" class="plus">+</button>
-                    <button onclick="decrement(this)" class="minus">-</button>
-                    <button onclick="reset(this)" class="reset">C</button>
+                <div class="num-control">
+                    <button onclick="increment(this, 'num')" class="plus">+</button>
+                    <button onclick="decrement(this, 'num')" class="minus">-</button>
+                    <button onclick="reset(this, 'num')" class="reset">C</button>
+                </div>
+                <div class="production-control">
+                    <button onclick="increment(this, 'production')" class="plus">+</button>
+                    <button onclick="decrement(this, 'production')" class="minus">-</button>
+                    <button onclick="reset(this, 'production')" class="reset">C</button>
                 </div>
             </div>
         </div>
@@ -46,13 +60,21 @@
                 <img src="img/titanium.png" alt="titanium">
             </div>
             <div class="number">
-                <h1>0</h1>
+                <div class="flex">
+                <h1 class="num">0</h1>
+                <h2 class="production">1</h2>
+                </div>
             </div>
             <div class="right">
-                <div class="control">
-                    <button onclick="increment(this)" class="plus">+</button>
-                    <button onclick="decrement(this)" class="minus">-</button>
-                    <button onclick="reset(this)" class="reset">C</button>
+                <div class="num-control">
+                    <button onclick="increment(this, 'num')" class="plus">+</button>
+                    <button onclick="decrement(this, 'num')" class="minus">-</button>
+                    <button onclick="reset(this, 'num')" class="reset">C</button>
+                </div>
+                <div class="production-control">
+                    <button onclick="increment(this, 'production')" class="plus">+</button>
+                    <button onclick="decrement(this, 'production')" class="minus">-</button>
+                    <button onclick="reset(this, 'production')" class="reset">C</button>
                 </div>
             </div>
         </div>
@@ -61,13 +83,21 @@
                 <img src="img/plants.png" alt="plants">
             </div>
             <div class="number">
-                <h1>0</h1>
+                <div class="flex">
+                <h1 class="num">0</h1>
+                <h2 class="production">1</h2>
+                </div>
             </div>
             <div class="right">
-                <div class="control">
-                    <button onclick="increment(this)" class="plus">+</button>
-                    <button onclick="decrement(this)" class="minus">-</button>
-                    <button onclick="reset(this)" class="reset">C</button>
+                <div class="num-control">
+                    <button onclick="increment(this, 'num')" class="plus">+</button>
+                    <button onclick="decrement(this, 'num')" class="minus">-</button>
+                    <button onclick="reset(this, 'num')" class="reset">C</button>
+                </div>
+                <div class="production-control">
+                    <button onclick="increment(this, 'production')" class="plus">+</button>
+                    <button onclick="decrement(this, 'production')" class="minus">-</button>
+                    <button onclick="reset(this, 'production')" class="reset">C</button>
                 </div>
             </div>
         </div>
@@ -76,13 +106,21 @@
                 <img src="img/heat.png" alt="heat">
             </div>
             <div class="number">
-                <h1>0</h1>
+                <div class="flex">
+                <h1 class="num">0</h1>
+                <h2 class="production">1</h2>
+                </div>
             </div>
             <div class="right">
-                <div class="control">
-                    <button onclick="increment(this)" class="plus">+</button>
-                    <button onclick="decrement(this)" class="minus">-</button>
-                    <button onclick="reset(this)" class="reset">C</button>
+                <div class="num-control">
+                    <button onclick="increment(this, 'num')" class="plus">+</button>
+                    <button onclick="decrement(this, 'num')" class="minus">-</button>
+                    <button onclick="reset(this, 'num')" class="reset">C</button>
+                </div>
+                <div class="production-control">
+                    <button onclick="increment(this, 'production')" class="plus">+</button>
+                    <button onclick="decrement(this, 'production')" class="minus">-</button>
+                    <button onclick="reset(this, 'production')" class="reset">C</button>
                 </div>
             </div>
         </div>
@@ -91,13 +129,21 @@
                 <img src="img/energy.png" alt="energy">
             </div>
             <div class="number">
-                <h1>0</h1>
+                <div class="flex">
+                <h1 class="num">0</h1>
+                <h2 class="production">1</h2>
+                </div>
             </div>
             <div class="right">
-                <div class="control">
-                    <button onclick="increment(this)" class="plus">+</button>
-                    <button onclick="decrement(this)" class="minus">-</button>
-                    <button onclick="reset(this)" class="reset">C</button>
+                <div class="num-control">
+                    <button onclick="increment(this, 'num')" class="plus">+</button>
+                    <button onclick="decrement(this, 'num')" class="minus">-</button>
+                    <button onclick="reset(this, 'num')" class="reset">C</button>
+                </div>
+                <div class="production-control">
+                    <button onclick="increment(this, 'production')" class="plus">+</button>
+                    <button onclick="decrement(this, 'production')" class="minus">-</button>
+                    <button onclick="reset(this, 'production')" class="reset">C</button>
                 </div>
             </div>
         </div>
@@ -106,13 +152,15 @@
                 <img src="img/TR.png" alt="terraform rating">
             </div>
             <div class="number">
-                <h1>0</h1>
+                <div class="flex">
+                <h1 class="num">20</h1>
+                </div>
             </div>
             <div class="right">
-                <div class="control">
-                    <button onclick="increment(this)" class="plus">+</button>
-                    <button onclick="decrement(this)" class="minus">-</button>
-                    <button onclick="reset(this)" class="reset">C</button>
+                <div class="num-control">
+                    <button onclick="increment(this, 'num')" class="plus">+</button>
+                    <button onclick="decrement(this, 'num')" class="minus">-</button>
+                    <button onclick="reset(this, 'num')" class="reset">C</button>
                 </div>
             </div>
         </div>
