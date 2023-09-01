@@ -1,7 +1,47 @@
 body {
-    display: flex;
-    justify-content: center;
+    align-items: center;
 }
+
+.banner {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: space-between; /* 使元素在两端对齐 */
+    background-color: rgb(159, 69, 24);
+    color: white; /* 字体颜色 */
+    height: 100px; /* 高度 */
+    padding: 0 20px; /* 左右内边距 */
+  }
+  
+/* 样式标题 */
+.banner-title {
+margin: 0; /* 移除默认的外边距 */
+font-size: 24px; /* 字体大小 */
+}
+
+.production-button {
+    background-color: blueviolet; /* 按钮背景色 */
+    width: 200px; /* 按钮宽度 */
+    color: white; /* 按钮文字色 */
+    border: none; /* 移除默认边框 */
+    padding: 10px 20px; /* 内边距 */
+    margin-right: 30px;
+    cursor: pointer; /* 鼠标样式 */
+    font-size: 32px;
+}
+
+/* 样式重置按钮 */
+.reset-button {
+    background-color: red; /* 按钮背景色 */
+    color: white; /* 按钮文字色 */
+    border: none; /* 移除默认边框 */
+    padding: 10px 20px; /* 内边距 */
+    cursor: pointer; /* 鼠标样式 */
+}
+
+.reset-button:hover {
+background-color: #555; /* 鼠标悬停时的背景色 */
+}
+
 
 .flex {
     display: flex;
@@ -55,7 +95,7 @@ body {
 }
 
 .number {
-    width: 50px;
+    width: 80px;
 }
 
 .right {
@@ -73,22 +113,6 @@ body {
 
 .production-control button {
     background-color: blueviolet;
-}
-
-
-.production-button {
-    background-color: purple;  /* 蓝色背景 */
-    color: white;  /* 白色文字 */
-    padding: 14px 20px;  /* 内部填充 */
-    margin: 15px;
-    border: none;  /* 无边框 */
-    border-radius: 12px;  /* 圆角 */
-    cursor: pointer;  /* 鼠标悬停时变成手形 */
-    width: 90%;  /* 宽度 */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  /* 阴影效果 */
-    transition: all 0.3s ease 0s;  /* 过渡效果 */
-    font-size: 60px;
-    
 }
 
 .production-button:hover {

@@ -6,6 +6,13 @@
     <script src="index.js"></script>
 </head>
 <body>
+    <div class="banner">
+        <h1 class="banner-title">《重塑火星》辅助 V1.0</h1>
+        <div class="buttons">
+        <button onclick="production()" class="production-button">生产</button>  
+        <button class="reset-button" onclick="clearAll()">重置全部</button>
+        </div>
+      </div>
     <div class="main">
         <div class="counter" id="credit">
             <div class="left">
@@ -20,9 +27,11 @@
             <div class="right">
                 <div class="num-control">
                     <button onclick="increment(this, 'num')" class="plus">+</button>
+                    <button onclick="increment5()" class="plus">+5</button>
                     <button onclick="decrement(this, 'num')" class="minus">-</button>
-                    <button onclick="reset(this, 'num')" class="reset">C</button>
+                    <button onclick="decrement5()" class="minus">-5</button>
                     <input type="number" class="num-input" placeholder="42">
+                    <button onclick="reset(this, 'num')" class="reset">C</button>
                 </div>
                 <div class="production-control">
                     <button onclick="increment(this, 'production')" class="plus">+</button>
@@ -100,9 +109,9 @@
                 </div>
             </div>
         </div>
-        <div class="counter" id="heat">
+        <div class="counter" id="energy">
             <div class="left">
-                <img src="img/heat.png" alt="heat">
+                <img src="img/energy.png" alt="energy">
             </div>
             <div class="number">
                 <div class="flex">
@@ -123,9 +132,9 @@
                 </div>
             </div>
         </div>
-        <div class="counter" id="energy">
+        <div class="counter" id="heat">
             <div class="left">
-                <img src="img/energy.png" alt="energy">
+                <img src="img/heat.png" alt="heat">
             </div>
             <div class="number">
                 <div class="flex">
@@ -163,8 +172,5 @@
                 </div>
             </div>
         </div>
-        <button onclick="production()" class="production-button">
-            生产
-        </button>  
     </div>
 </div>
